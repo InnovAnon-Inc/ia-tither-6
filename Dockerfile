@@ -8,7 +8,8 @@ RUN create_gcov                    \
       --profile=/var/cpuminer.data \
       --gcov=/var/cpuminer
 
-FROM innovanon/void-base as builder-2
+#FROM innovanon/void-base as builder-2
+FROM innovanon/doom-base as builder-2
 COPY --from=converter /var/cpuminer/ /var/cpuminer/
 
 ARG CPPFLAGS
